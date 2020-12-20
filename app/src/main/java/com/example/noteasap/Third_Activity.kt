@@ -14,16 +14,9 @@ private val Home=HomeBlankFragment();
 private val Bookmark= BookmarkBlankFragment();
 private val Account=accountBlankFragment();
 private lateinit var bottom_navigation:BottomNavigationView;
-//private lateinit var home_nav:MenuItem;
-//private lateinit var bookmark_nav:MenuItem;
-//private lateinit var account_nav:MenuItem;
 class Third_Activity : AppCompatActivity() {
- //// why can't i use this here
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//    home_nav=findViewById(R.id.home)
-//    bookmark_nav=findViewById(R.id.bookmark)
-//    account_nav=findViewById(R.id.account)
         setContentView(R.layout.activity_third_)
         replaceFragments(Home)
          frament_container=findViewById(R.id.fragment_container)
@@ -37,7 +30,7 @@ class Third_Activity : AppCompatActivity() {
         true;
     }
     }
-    private fun replaceFragments(fragment: Fragment){
+    fun replaceFragments(fragment:Fragment){
         if(fragment!=null){
             val transaction=supportFragmentManager.beginTransaction();
             transaction.replace(R.id.fragment_container,fragment) //only use this here

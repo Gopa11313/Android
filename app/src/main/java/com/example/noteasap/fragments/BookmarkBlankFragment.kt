@@ -11,7 +11,6 @@ import com.example.noteasap.R
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-private lateinit var bookmark:TextView;
 class BookmarkBlankFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
@@ -32,13 +31,10 @@ class BookmarkBlankFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_bookmark_blank, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        bookmark=view.findViewById(R.id.ic_bookmark)
-        bookmark.setOnClickListener() {
-            Toast.makeText(context, "This bookmark page", Toast.LENGTH_SHORT).show()
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//    
+//    }
     companion object {
 
         fun newInstance(param1: String, param2: String) =

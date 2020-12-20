@@ -7,16 +7,17 @@
     tools:context=".fragments.BookmarkBlankFragment"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/mybutton"
     >
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/ic_bookmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bookmark"
-        android:textSize="36sp"
-        android:textColor="@color/black"
-        />
+        android:text="Recyclerview"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:scrollbars="vertical"
+        />
 </LinearLayout>

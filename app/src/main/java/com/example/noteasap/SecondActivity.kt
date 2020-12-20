@@ -16,8 +16,11 @@ class SecondActivity : AppCompatActivity() {
 
         notif.setOnClickListener(){
             flag=true;
-            startActivity(Intent(this,Third_Activity::class.java))
+            nexatact();
         }
-
+    }
+    fun nexatact(){
+        startActivity(Intent(this,Third_Activity::class.java))
+        finish();
     }
 }
