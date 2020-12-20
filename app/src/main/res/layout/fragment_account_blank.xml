@@ -12,6 +12,7 @@
     android:background="@drawable/mybutton"
     tools:context=".fragments.accountBlankFragment"
     android:gravity="center"
+    android:padding="20dp"
     >
 
     <androidx.cardview.widget.CardView
@@ -40,7 +41,7 @@
         android:text="LOGIN / SIGNUP"
         android:textColor="#000000"
         android:textSize="19sp"
-        android:background="@color/organe"
+        android:background="@drawable/shapesignup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +74,7 @@
 
     <FrameLayout
         android:id="@+id/uploadnotesframe"
-        android:layout_width="391dp"
+        android:layout_width="match_parent"
         android:layout_height="131dp"
         android:background="@drawable/shapelogin"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +88,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="242dp"
@@ -114,35 +114,40 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="391dp"
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@drawable/shapelogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uploadnotesframe"
-        app:layout_constraintVertical_bias="0.2">
+        app:layout_constraintVertical_bias="0.089">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:scrollbars="vertical"
-            />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:scrollbars="vertical" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:background="@drawable/shapelogin"
-            android:text="view more>>"
-            android:textColor="@color/green"
-            android:textSize="10sp"
-            />
-
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/shapeemail"
+                    android:text="view more>>"
+                    android:textColor="@color/green"
+                    android:textSize="10sp" />
     </FrameLayout>
 
-
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shapelogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
